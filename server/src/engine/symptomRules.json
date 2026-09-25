@@ -1,0 +1,253 @@
+[
+  {
+    "id": "chest_pain_critical",
+    "primarySymptom": "chest_pain",
+    "conditions": {
+      "radiatingPain": true,
+      "shortnessOfBreath": true
+    },
+    "severity": "critical",
+    "specialty": "cardiology",
+    "reasoning": "Chest pain with radiation and shortness of breath may indicate a heart attack or pulmonary embolism. Seek emergency care immediately.",
+    "redFlags": ["Possible cardiac event", "Possible pulmonary embolism"]
+  },
+  {
+    "id": "chest_pain_severe",
+    "primarySymptom": "chest_pain",
+    "conditions": {
+      "painScale": { "min": 7 }
+    },
+    "severity": "severe",
+    "specialty": "cardiology",
+    "reasoning": "Severe chest pain (7+/10) requires urgent cardiac evaluation.",
+    "redFlags": ["High pain intensity"]
+  },
+  {
+    "id": "chest_pain_moderate",
+    "primarySymptom": "chest_pain",
+    "conditions": {
+      "painScale": { "min": 4, "max": 6 }
+    },
+    "severity": "moderate",
+    "specialty": "cardiology",
+    "reasoning": "Moderate chest pain should be evaluated by a physician within 24 hours.",
+    "redFlags": []
+  },
+  {
+    "id": "chest_pain_mild",
+    "primarySymptom": "chest_pain",
+    "conditions": {},
+    "severity": "mild",
+    "specialty": "general medicine",
+    "reasoning": "Mild chest discomfort may be musculoskeletal or anxiety-related, but monitor closely.",
+    "redFlags": []
+  },
+  {
+    "id": "headache_critical",
+    "primarySymptom": "headache",
+    "conditions": {
+      "suddenOnset": true,
+      "worstHeadache": true
+    },
+    "severity": "critical",
+    "specialty": "neurology",
+    "reasoning": "Sudden worst-ever headache may indicate subarachnoid hemorrhage. Emergency evaluation needed.",
+    "redFlags": ["Thunderclap headache pattern"]
+  },
+  {
+    "id": "headache_severe",
+    "primarySymptom": "headache",
+    "conditions": {
+      "painScale": { "min": 7 },
+      "visionChanges": true
+    },
+    "severity": "severe",
+    "specialty": "neurology",
+    "reasoning": "Severe headache with vision changes needs urgent neurological assessment.",
+    "redFlags": ["Vision changes with headache"]
+  },
+  {
+    "id": "headache_moderate",
+    "primarySymptom": "headache",
+    "conditions": {
+      "durationDays": { "min": 3 }
+    },
+    "severity": "moderate",
+    "specialty": "general medicine",
+    "reasoning": "Persistent headache lasting more than 3 days warrants medical consultation.",
+    "redFlags": []
+  },
+  {
+    "id": "headache_mild",
+    "primarySymptom": "headache",
+    "conditions": {},
+    "severity": "mild",
+    "specialty": "general medicine",
+    "reasoning": "Mild headache is often tension-related. Rest, hydration, and OTC pain relief may help.",
+    "redFlags": []
+  },
+  {
+    "id": "fever_critical",
+    "primarySymptom": "fever",
+    "conditions": {
+      "temperature": { "min": 40 },
+      "confusion": true
+    },
+    "severity": "critical",
+    "specialty": "general medicine",
+    "reasoning": "Very high fever with confusion may indicate serious infection or sepsis.",
+    "redFlags": ["Altered mental status", "Hyperpyrexia"]
+  },
+  {
+    "id": "fever_severe",
+    "primarySymptom": "fever",
+    "conditions": {
+      "temperature": { "min": 39 },
+      "durationDays": { "min": 3 }
+    },
+    "severity": "severe",
+    "specialty": "general medicine",
+    "reasoning": "High fever persisting over 3 days requires medical evaluation.",
+    "redFlags": ["Prolonged high fever"]
+  },
+  {
+    "id": "fever_moderate",
+    "primarySymptom": "fever",
+    "conditions": {
+      "temperature": { "min": 38 }
+    },
+    "severity": "moderate",
+    "specialty": "general medicine",
+    "reasoning": "Moderate fever — rest, fluids, and monitor. See a doctor if it worsens.",
+    "redFlags": []
+  },
+  {
+    "id": "fever_mild",
+    "primarySymptom": "fever",
+    "conditions": {},
+    "severity": "mild",
+    "specialty": "general medicine",
+    "reasoning": "Low-grade fever often resolves with rest and hydration.",
+    "redFlags": []
+  },
+  {
+    "id": "breathing_critical",
+    "primarySymptom": "shortness_of_breath",
+    "conditions": {
+      "atRest": true,
+      "chestPain": true
+    },
+    "severity": "critical",
+    "specialty": "pulmonology",
+    "reasoning": "Breathlessness at rest with chest pain is a medical emergency.",
+    "redFlags": ["Respiratory distress at rest"]
+  },
+  {
+    "id": "breathing_severe",
+    "primarySymptom": "shortness_of_breath",
+    "conditions": {
+      "wheezing": true,
+      "preExistingAsthma": true
+    },
+    "severity": "severe",
+    "specialty": "pulmonology",
+    "reasoning": "Wheezing with asthma history may indicate a severe exacerbation.",
+    "redFlags": ["Asthma exacerbation"]
+  },
+  {
+    "id": "breathing_moderate",
+    "primarySymptom": "shortness_of_breath",
+    "conditions": {
+      "onExertion": true
+    },
+    "severity": "moderate",
+    "specialty": "pulmonology",
+    "reasoning": "Breathlessness on exertion should be evaluated, especially if new or worsening.",
+    "redFlags": []
+  },
+  {
+    "id": "breathing_mild",
+    "primarySymptom": "shortness_of_breath",
+    "conditions": {},
+    "severity": "mild",
+    "specialty": "general medicine",
+    "reasoning": "Mild breathlessness may be anxiety or mild respiratory irritation.",
+    "redFlags": []
+  },
+  {
+    "id": "abdominal_critical",
+    "primarySymptom": "abdominal_pain",
+    "conditions": {
+      "rigidAbdomen": true,
+      "vomitingBlood": true
+    },
+    "severity": "critical",
+    "specialty": "general surgery",
+    "reasoning": "Rigid abdomen or vomiting blood suggests a surgical emergency.",
+    "redFlags": ["Possible peritonitis", "GI bleeding"]
+  },
+  {
+    "id": "abdominal_severe",
+    "primarySymptom": "abdominal_pain",
+    "conditions": {
+      "painScale": { "min": 7 },
+      "fever": true
+    },
+    "severity": "severe",
+    "specialty": "gastroenterology",
+    "reasoning": "Severe abdominal pain with fever needs urgent evaluation.",
+    "redFlags": ["Possible appendicitis or infection"]
+  },
+  {
+    "id": "abdominal_moderate",
+    "primarySymptom": "abdominal_pain",
+    "conditions": {
+      "durationDays": { "min": 2 }
+    },
+    "severity": "moderate",
+    "specialty": "gastroenterology",
+    "reasoning": "Persistent abdominal pain for 2+ days should be checked by a doctor.",
+    "redFlags": []
+  },
+  {
+    "id": "abdominal_mild",
+    "primarySymptom": "abdominal_pain",
+    "conditions": {},
+    "severity": "mild",
+    "specialty": "general medicine",
+    "reasoning": "Mild abdominal discomfort may be indigestion or gas. Monitor symptoms.",
+    "redFlags": []
+  },
+  {
+    "id": "skin_rash_severe",
+    "primarySymptom": "skin_rash",
+    "conditions": {
+      "spreading": true,
+      "fever": true
+    },
+    "severity": "severe",
+    "specialty": "dermatology",
+    "reasoning": "Spreading rash with fever may indicate serious infection or allergic reaction.",
+    "redFlags": ["Systemic infection signs"]
+  },
+  {
+    "id": "skin_rash_moderate",
+    "primarySymptom": "skin_rash",
+    "conditions": {
+      "itching": true
+    },
+    "severity": "moderate",
+    "specialty": "dermatology",
+    "reasoning": "Itchy rash may be allergic or infectious. Avoid scratching and see a dermatologist.",
+    "redFlags": []
+  },
+  {
+    "id": "skin_rash_mild",
+    "primarySymptom": "skin_rash",
+    "conditions": {},
+    "severity": "mild",
+    "specialty": "dermatology",
+    "reasoning": "Localized mild rash often resolves with basic skin care.",
+    "redFlags": []
+  }
+]

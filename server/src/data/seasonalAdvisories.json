@@ -1,0 +1,102 @@
+[
+  {
+    "id": "monsoon-dengue",
+    "month": [6, 7, 8, 9],
+    "region": "hyderabad",
+    "icon": "🦟",
+    "title": "Monsoon: Dengue & Malaria Prevention",
+    "summary": "Stagnant water breeds mosquitoes. Use repellent and eliminate standing water around your home.",
+    "details": "During monsoon months in Hyderabad, dengue and malaria cases rise significantly. Wear long sleeves during dawn and dusk, use DEET-based repellents, install window screens, and ensure no stagnant water collects in containers, flower pots, or clogged drains. Seek medical care immediately if you develop high fever with body aches or rash.",
+    "tags": []
+  },
+  {
+    "id": "monsoon-water",
+    "month": [6, 7, 8, 9],
+    "region": "hyderabad",
+    "icon": "💧",
+    "title": "Safe Drinking Water",
+    "summary": "Boil or filter water during monsoon. Waterborne illnesses spike in rainy season.",
+    "details": "Contaminated water during monsoon can cause typhoid, cholera, and gastroenteritis. Always drink boiled or filtered water, avoid street food with questionable hygiene, and wash fruits and vegetables thoroughly.",
+    "tags": ["children", "elderly", "pregnancy"]
+  },
+  {
+    "id": "summer-heat",
+    "month": [3, 4, 5],
+    "region": "hyderabad",
+    "icon": "☀️",
+    "title": "Summer Heatstroke Alert",
+    "summary": "Hyderabad summers exceed 40°C. Stay hydrated and avoid midday sun exposure.",
+    "details": "Heatstroke is a medical emergency. Drink at least 3 liters of water daily, wear light cotton clothing, avoid outdoor activity between 11 AM and 4 PM, and never leave children or elderly in parked vehicles. Signs of heatstroke include confusion, hot dry skin, and rapid pulse.",
+    "tags": ["elderly", "children"]
+  },
+  {
+    "id": "summer-dehydration",
+    "month": [3, 4, 5],
+    "region": "hyderabad",
+    "icon": "🥤",
+    "title": "Stay Hydrated",
+    "summary": "Carry water always. ORS helps replace electrolytes lost through sweating.",
+    "details": "Dehydration causes headaches, dizziness, and fatigue. Drink water regularly even if not thirsty. Coconut water and ORS are excellent for electrolyte replacement during extreme heat.",
+    "tags": ["pregnancy", "elderly"]
+  },
+  {
+    "id": "winter-flu",
+    "month": [11, 12, 1, 2],
+    "region": "hyderabad",
+    "icon": "🤧",
+    "title": "Winter Flu Season",
+    "summary": "Flu and respiratory infections peak in winter. Consider vaccination and mask in crowds.",
+    "details": "Influenza, common cold, and bronchitis are common during Hyderabad winters. Get a flu vaccine if eligible, wash hands frequently, avoid close contact with sick individuals, and seek care if fever persists beyond 3 days or breathing becomes difficult.",
+    "tags": ["elderly", "chronic", "children"]
+  },
+  {
+    "id": "winter-air",
+    "month": [11, 12, 1, 2],
+    "region": "hyderabad",
+    "icon": "🌫️",
+    "title": "Air Quality & Respiratory Care",
+    "summary": "Cool dry air can worsen asthma and COPD. Use a humidifier and keep inhalers handy.",
+    "details": "Winter air quality and temperature drops can trigger asthma attacks and worsen COPD. Keep rescue inhalers accessible, use air purifiers indoors, and avoid outdoor exercise on high pollution days.",
+    "tags": ["chronic"]
+  },
+  {
+    "id": "pollen-allergy",
+    "month": [2, 3, 10, 11],
+    "region": "hyderabad",
+    "icon": "🌸",
+    "title": "Seasonal Allergies",
+    "summary": "Pollen counts rise during spring and post-monsoon. Antihistamines may help mild symptoms.",
+    "details": "Seasonal allergic rhinitis causes sneezing, itchy eyes, and congestion. Keep windows closed during high pollen days, shower after outdoor activity, and consult a doctor for persistent symptoms.",
+    "tags": []
+  },
+  {
+    "id": "pregnancy-monsoon",
+    "month": [6, 7, 8, 9],
+    "region": "hyderabad",
+    "icon": "🤰",
+    "title": "Pregnancy Care During Monsoon",
+    "summary": "Pregnant women are more susceptible to infections. Extra hygiene and prenatal checkups are essential.",
+    "details": "During monsoon, pregnant women should be especially vigilant about food and water hygiene, mosquito protection (dengue can be severe in pregnancy), and maintaining regular prenatal appointments. Avoid self-medication.",
+    "tags": ["pregnancy"]
+  },
+  {
+    "id": "elderly-winter",
+    "month": [11, 12, 1, 2],
+    "region": "hyderabad",
+    "icon": "👴",
+    "title": "Elderly Winter Wellness",
+    "summary": "Seniors are vulnerable to hypothermia and joint pain flares. Keep warm and stay active indoors.",
+    "details": "Elderly individuals should maintain room temperature above 20°C, dress in layers, continue light indoor exercise, ensure adequate vitamin D intake, and monitor blood pressure regularly as cold weather can affect cardiovascular health.",
+    "tags": ["elderly"]
+  },
+  {
+    "id": "children-immunization",
+    "month": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    "region": "india",
+    "icon": "💉",
+    "title": "Child Immunization Schedule",
+    "summary": "Keep children's vaccinations up to date per the national immunization schedule.",
+    "details": "Ensure your child receives all recommended vaccines including MMR, DPT, polio, and hepatitis B. Annual flu shots are recommended for children over 6 months, especially before monsoon and winter seasons.",
+    "tags": ["children"]
+  }
+]
