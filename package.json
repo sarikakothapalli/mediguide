@@ -11,5 +11,8 @@
     "build": "npm run build --prefix server && npm run build --prefix client",
     "start": "npm run start --prefix server",
     "smoke": "node scripts/smoke-test.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
   }
 }
