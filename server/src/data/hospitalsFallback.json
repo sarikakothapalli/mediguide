@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Apollo Hospitals Jubilee Hills",
+    "type": "hospital",
+    "lat": 17.4213,
+    "lng": 78.4078,
+    "specialties": ["cardiology", "neurology", "general medicine", "general surgery", "pulmonology", "gastroenterology"],
+    "tier": "multi-specialty",
+    "rating": 4.7,
+    "phone": "+914044882888",
+    "address": "Road No 72, Jubilee Hills, Hyderabad",
+    "openNow": true
+  },
+  {
+    "name": "Yashoda Hospitals Secunderabad",
+    "type": "hospital",
+    "lat": 17.4399,
+    "lng": 78.4983,
+    "specialties": ["cardiology", "neurology", "general medicine", "pulmonology", "gastroenterology"],
+    "tier": "multi-specialty",
+    "rating": 4.5,
+    "phone": "+914027777777",
+    "address": "Alexander Road, Secunderabad",
+    "openNow": true
+  },
+  {
+    "name": "KIMS Hospital Kondapur",
+    "type": "hospital",
+    "lat": 17.4702,
+    "lng": 78.3534,
+    "specialties": ["cardiology", "general medicine", "general surgery", "dermatology"],
+    "tier": "multi-specialty",
+    "rating": 4.4,
+    "phone": "+914044040404",
+    "address": "1-112/86, Kondapur, Hyderabad",
+    "openNow": true
+  },
+  {
+    "name": "Continental Hospitals Gachibowli",
+    "type": "hospital",
+    "lat": 17.4401,
+    "lng": 78.3489,
+    "specialties": ["cardiology", "neurology", "pulmonology", "general surgery"],
+    "tier": "multi-specialty",
+    "rating": 4.6,
+    "phone": "+914067777777",
+    "address": "Plot No 3, Gachibowli, Hyderabad",
+    "openNow": true
+  },
+  {
+    "name": "Care Hospitals Banjara Hills",
+    "type": "hospital",
+    "lat": 17.4126,
+    "lng": 78.4473,
+    "specialties": ["cardiology", "general medicine", "gastroenterology", "dermatology"],
+    "tier": "multi-specialty",
+    "rating": 4.3,
+    "phone": "+914023444444",
+    "address": "Road No 1, Banjara Hills, Hyderabad",
+    "openNow": true
+  },
+  {
+    "name": "MedPlus Clinic Madhapur",
+    "type": "clinic",
+    "lat": 17.4486,
+    "lng": 78.3908,
+    "specialties": ["general medicine", "dermatology"],
+    "tier": "clinic",
+    "rating": 4.2,
+    "phone": "+914044567890",
+    "address": "Madhapur, Hyderabad",
+    "openNow": true
+  },
+  {
+    "name": "Pulse Clinic Kukatpally",
+    "type": "clinic",
+    "lat": 17.4849,
+    "lng": 78.4138,
+    "specialties": ["general medicine", "pulmonology"],
+    "tier": "clinic",
+    "rating": 4.0,
+    "phone": "+914023012345",
+    "address": "Kukatpally, Hyderabad",
+    "openNow": true
+  },
+  {
+    "name": "MedPlus Pharmacy Hitech City",
+    "type": "pharmacy",
+    "lat": 17.4474,
+    "lng": 78.3762,
+    "specialties": [],
+    "tier": "pharmacy",
+    "rating": 4.5,
+    "phone": "+914044567234",
+    "address": "Hitech City, Hyderabad",
+    "openNow": true
+  },
+  {
+    "name": "Apollo Pharmacy Banjara Hills",
+    "type": "pharmacy",
+    "lat": 17.4134,
+    "lng": 78.4456,
+    "specialties": [],
+    "tier": "pharmacy",
+    "rating": 4.4,
+    "phone": "+914023456789",
+    "address": "Banjara Hills, Hyderabad",
+    "openNow": true
+  },
+  {
+    "name": "24x7 Pharmacy Secunderabad",
+    "type": "pharmacy",
+    "lat": 17.4367,
+    "lng": 78.4978,
+    "specialties": [],
+    "tier": "pharmacy",
+    "rating": 4.1,
+    "phone": "+914027890567",
+    "address": "Secunderabad",
+    "openNow": true
+  }
+]

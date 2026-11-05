@@ -1,0 +1,148 @@
+{
+  "advisories": [
+    {
+      "id": "monsoon_dengue",
+      "season": "monsoon",
+      "title": "Monsoon Season: Dengue & Malaria Prevention",
+      "description": "During the monsoon season (June-September), dengue and malaria cases increase in Hyderabad. Protect yourself with mosquito repellent, wear full-sleeve clothing, and ensure your surroundings are free of stagnant water.",
+      "tips": [
+        "Use mosquito repellent creams or sprays regularly",
+        "Wear full-sleeve shirts and long pants during dawn and dusk",
+        "Remove stagnant water from containers, coolers, and flower pots",
+        "Sleep under mosquito nets",
+        "Seek immediate medical attention if you develop fever, headache, or body aches"
+      ],
+      "healthFlags": ["high_mosquito_risk"],
+      "priority": "high"
+    },
+    {
+      "id": "monsoon_waterborne",
+      "season": "monsoon",
+      "title": "Waterborne Diseases During Monsoon",
+      "description": "Monsoon brings increased risk of waterborne diseases like cholera, typhoid, and gastroenteritis. Ensure water safety and maintain proper hygiene.",
+      "tips": [
+        "Drink only boiled or filtered water",
+        "Wash hands frequently with soap and water",
+        "Avoid street food and ensure food is cooked properly",
+        "Maintain personal hygiene and clean surroundings",
+        "Get vaccinated against typhoid and cholera if recommended"
+      ],
+      "healthFlags": ["digestive_issues"],
+      "priority": "high"
+    },
+    {
+      "id": "summer_heatstroke",
+      "season": "summer",
+      "title": "Summer: Heat Stroke & Dehydration Prevention",
+      "description": "Hyderabad summers (March-May) are extremely hot. Protect yourself from heat stroke and dehydration by staying hydrated and avoiding prolonged sun exposure.",
+      "tips": [
+        "Drink plenty of water throughout the day",
+        "Avoid going out during peak sun hours (11 AM - 4 PM)",
+        "Wear light-colored, breathable clothing",
+        "Use sunscreen with SPF 30 or higher",
+        "Eat water-rich fruits like watermelon, cucumber, and oranges",
+        "Watch for signs of heat stroke: dizziness, nausea, rapid heartbeat"
+      ],
+      "healthFlags": ["heat_sensitivity"],
+      "priority": "high"
+    },
+    {
+      "id": "summer_skin_care",
+      "season": "summer",
+      "title": "Summer Skin Care Tips",
+      "description": "Protect your skin during summer from sun damage, prickly heat, and fungal infections common in hot and humid weather.",
+      "tips": [
+        "Take cool baths or showers to reduce body temperature",
+        "Use talcum powder or anti-fungal powder to prevent prickly heat",
+        "Keep skin dry, especially in folds",
+        "Wear breathable cotton clothing",
+        "Avoid harsh soaps; use mild cleansers",
+        "Apply moisturizer to prevent dry skin"
+      ],
+      "healthFlags": ["skin_sensitivity"],
+      "priority": "medium"
+    },
+    {
+      "id": "winter_flu",
+      "season": "winter",
+      "title": "Winter: Flu & Cold Prevention",
+      "description": "Winter months (November-February) see increased cases of flu and common cold in Hyderabad. Strengthen immunity and practice preventive measures.",
+      "tips": [
+        "Get vaccinated against influenza",
+        "Wash hands frequently to prevent virus transmission",
+        "Avoid touching your face, eyes, and mouth",
+        "Maintain distance from people with cold or flu symptoms",
+        "Stay warm and avoid sudden temperature changes",
+        "Get adequate sleep to boost immunity"
+      ],
+      "healthFlags": ["respiratory_sensitivity"],
+      "priority": "high"
+    },
+    {
+      "id": "winter_respiratory",
+      "season": "winter",
+      "title": "Winter Respiratory Health",
+      "description": "Winter can exacerbate respiratory conditions like asthma and bronchitis. Take precautions to protect your lungs.",
+      "tips": [
+        "Avoid cold air exposure; wear a mask if needed",
+        "Use a humidifier to keep air moist",
+        "Avoid smoke and air pollution",
+        "Stay hydrated with warm fluids",
+        "Do light exercises like walking to improve lung capacity",
+        "Keep inhalers and medications accessible if you have asthma"
+      ],
+      "healthFlags": ["asthma", "bronchitis"],
+      "priority": "high"
+    },
+    {
+      "id": "general_hygiene",
+      "season": "all",
+      "title": "General Hygiene & Wellness",
+      "description": "Maintain good hygiene practices year-round to prevent common illnesses and infections.",
+      "tips": [
+        "Wash hands before eating and after using the toilet",
+        "Keep your living space clean and well-ventilated",
+        "Maintain a balanced diet with fruits and vegetables",
+        "Exercise regularly for at least 30 minutes daily",
+        "Get 7-8 hours of quality sleep",
+        "Manage stress through meditation or yoga"
+      ],
+      "healthFlags": [],
+      "priority": "medium"
+    },
+    {
+      "id": "vaccination_reminder",
+      "season": "all",
+      "title": "Vaccination Reminder",
+      "description": "Stay up-to-date with recommended vaccinations to protect yourself and your community from preventable diseases.",
+      "tips": [
+        "Check your vaccination status with your doctor",
+        "Get vaccinated against COVID-19 if not already done",
+        "Ensure childhood vaccinations are complete",
+        "Get annual flu shots during flu season",
+        "Consider typhoid and hepatitis A vaccines if traveling",
+        "Consult your doctor about other recommended vaccines"
+      ],
+      "healthFlags": [],
+      "priority": "medium"
+    }
+  ],
+  "seasons": {
+    "monsoon": {
+      "months": [6, 7, 8, 9],
+      "label": "Monsoon (Jun-Sep)"
+    },
+    "summer": {
+      "months": [3, 4, 5],
+      "label": "Summer (Mar-May)"
+    },
+    "winter": {
+      "months": [11, 12, 1, 2],
+      "label": "Winter (Nov-Feb)"
+    },
+    "all": {
+      "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "label": "Year-Round"
+    }
+  }
+}
