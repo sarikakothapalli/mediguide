@@ -1,7 +1,10 @@
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import { useEffect } from 'react';
+<<<<<<< HEAD
 import { useLanguage } from '../contexts/LanguageContext';
+=======
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
 
 const defaultIcon = L.icon({
   iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
@@ -75,7 +78,10 @@ export default function MapView({
   height = '300px',
   zoom = 13,
 }: MapViewProps) {
+<<<<<<< HEAD
   const { t } = useLanguage();
+=======
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
   const getIcon = (type?: string) => {
     switch (type) {
       case 'hospital':
@@ -94,7 +100,11 @@ export default function MapView({
 
   const allMarkers = [...markers];
   if (ambulancePosition) {
+<<<<<<< HEAD
     allMarkers.push({ lat: ambulancePosition[0], lng: ambulancePosition[1], label: t('Ambulance'), type: 'ambulance' });
+=======
+    allMarkers.push({ lat: ambulancePosition[0], lng: ambulancePosition[1], label: 'Ambulance', type: 'ambulance' });
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
   }
 
   return (
@@ -119,7 +129,11 @@ export default function MapView({
         ))}
         {ambulancePosition && (
           <Marker position={ambulancePosition} icon={ambulanceIcon}>
+<<<<<<< HEAD
             <Popup>{t('Ambulance en route')}</Popup>
+=======
+            <Popup>Ambulance en route</Popup>
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
           </Marker>
         )}
         {routeLine && routeLine.length > 1 && (

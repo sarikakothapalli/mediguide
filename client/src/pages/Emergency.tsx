@@ -1,7 +1,10 @@
 import { useEffect, useState, useRef } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import MapView from '../components/MapView';
+<<<<<<< HEAD
 import { useLanguage } from '../contexts/LanguageContext';
+=======
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
 
 interface DispatchData {
   dispatchId?: string;
@@ -21,7 +24,10 @@ interface DispatchData {
 
 export default function Emergency() {
   const location = useLocation();
+<<<<<<< HEAD
   const { t } = useLanguage();
+=======
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
   const dispatch = location.state?.dispatch as DispatchData | undefined;
   const [eta, setEta] = useState(dispatch?.etaMinutes ?? 10);
   const [ambulancePos, setAmbulancePos] = useState<[number, number] | null>(null);
@@ -62,25 +68,42 @@ export default function Emergency() {
     <div className="space-y-4">
       <div className="bg-red-600 text-white rounded-2xl p-5 text-center">
         <span className="text-4xl">🚑</span>
+<<<<<<< HEAD
         <h2 className="mt-2 text-2xl font-semibold">{t('Ambulance Dispatched')}</h2>
         <p className="mt-1 text-red-100">{t('Mock dispatch for demo purposes')}</p>
+=======
+        <h2 className="text-2xl font-bold mt-2">Ambulance Dispatched</h2>
+        <p className="text-red-100 mt-1">Mock dispatch for demo purposes</p>
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
         {dispatch?.dispatchId && (
           <p className="text-xs text-red-200 mt-2 font-mono">{dispatch.dispatchId}</p>
         )}
       </div>
 
       <div className="bg-white rounded-xl p-5 border border-slate-200 text-center shadow-sm">
+<<<<<<< HEAD
         <p className="text-sm text-stone-500">{t('Estimated arrival')}</p>
         <p className="text-5xl font-bold text-red-600 mt-1">{eta}</p>
         <p className="text-stone-500">{t('minutes')}</p>
         {eta === 0 && (
           <p className="mt-2 font-semibold text-green-700">{t('Ambulance has arrived!')}</p>
+=======
+        <p className="text-sm text-slate-500">Estimated arrival</p>
+        <p className="text-5xl font-bold text-red-600 mt-1">{eta}</p>
+        <p className="text-slate-500">minutes</p>
+        {eta === 0 && (
+          <p className="text-green-700 font-semibold mt-2">Ambulance has arrived!</p>
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
         )}
       </div>
 
       <MapView
         center={[userLoc.lat, userLoc.lng]}
+<<<<<<< HEAD
         markers={[{ lat: userLoc.lat, lng: userLoc.lng, label: t('Your Location'), type: 'user' }]}
+=======
+        markers={[{ lat: userLoc.lat, lng: userLoc.lng, label: 'Your Location', type: 'user' }]}
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
         ambulancePosition={ambulancePos}
         routeLine={
           ambulancePos
@@ -94,6 +117,7 @@ export default function Emergency() {
       {summary && (
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
           <h3 className="font-bold text-amber-900 flex items-center gap-2">
+<<<<<<< HEAD
             {t('📋 Emergency Summary Card')}
           </h3>
           <p className="text-xs text-amber-700 mt-1 mb-3">
@@ -117,6 +141,31 @@ export default function Emergency() {
             {summary.primarySymptom && (
               <>
             <dt className="text-stone-500">{t('Symptom')}</dt>
+=======
+            📋 Emergency Summary Card
+          </h3>
+          <p className="text-xs text-amber-700 mt-1 mb-3">
+            Share this information with first responders
+          </p>
+          <dl className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            <dt className="text-slate-500">Name</dt>
+            <dd className="font-medium">{summary.name}</dd>
+            <dt className="text-slate-500">Blood Group</dt>
+            <dd className="font-medium">{summary.bloodGroup}</dd>
+            <dt className="text-slate-500">Allergies</dt>
+            <dd className="font-medium">{summary.allergies}</dd>
+            {summary.preExistingConditions && (
+              <>
+                <dt className="text-slate-500">Conditions</dt>
+                <dd className="font-medium">{summary.preExistingConditions}</dd>
+              </>
+            )}
+            <dt className="text-slate-500">Severity</dt>
+            <dd className="font-medium capitalize">{summary.currentSeverity}</dd>
+            {summary.primarySymptom && (
+              <>
+                <dt className="text-slate-500">Symptom</dt>
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
                 <dd className="font-medium capitalize">{summary.primarySymptom.replace(/_/g, ' ')}</dd>
               </>
             )}
@@ -128,6 +177,7 @@ export default function Emergency() {
         href="tel:108"
         className="block w-full text-center bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl text-lg"
       >
+<<<<<<< HEAD
         {t('📞 Or call 108 directly')}
       </a>
 
@@ -137,6 +187,17 @@ export default function Emergency() {
 
       <p className="text-xs text-slate-400 text-center">
         {t('This is a simulated dispatch for demo purposes. In a real emergency, always call 108.')}
+=======
+        📞 Or call 108 directly
+      </a>
+
+      <Link to="/" className="block text-center text-teal-700 font-medium py-2">
+        ← Back to Home
+      </Link>
+
+      <p className="text-xs text-slate-400 text-center">
+        This is a simulated dispatch for demo purposes. In a real emergency, always call 108.
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
       </p>
     </div>
   );

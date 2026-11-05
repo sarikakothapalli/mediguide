@@ -1,5 +1,8 @@
 import { formatDistance, googleMapsDirections } from '../utils/helpers';
+<<<<<<< HEAD
 import { useLanguage } from '../contexts/LanguageContext';
+=======
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
 
 interface Hospital {
   _id: string;
@@ -17,7 +20,10 @@ interface Hospital {
 }
 
 export default function HospitalCard({ hospital, highlight }: { hospital: Hospital; highlight?: boolean }) {
+<<<<<<< HEAD
   const { t } = useLanguage();
+=======
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
   return (
     <div
       className={`bg-white rounded-xl p-4 border shadow-sm ${
@@ -43,7 +49,11 @@ export default function HospitalCard({ hospital, highlight }: { hospital: Hospit
         <div className="flex flex-wrap gap-1 mt-2">
           {hospital.specialties.slice(0, 3).map((s) => (
             <span key={s} className="text-xs bg-teal-50 text-teal-700 px-2 py-0.5 rounded-full capitalize">
+<<<<<<< HEAD
               {t(s)}
+=======
+              {s}
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
             </span>
           ))}
         </div>
@@ -54,7 +64,11 @@ export default function HospitalCard({ hospital, highlight }: { hospital: Hospit
           href={`tel:${hospital.phone}`}
           className="flex-1 text-center bg-teal-700 text-white text-sm font-medium py-2.5 rounded-lg hover:bg-teal-800"
         >
+<<<<<<< HEAD
           {t('📞 Call')}
+=======
+          📞 Call
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
         </a>
         <a
           href={googleMapsDirections(hospital.lat, hospital.lng)}
@@ -62,7 +76,11 @@ export default function HospitalCard({ hospital, highlight }: { hospital: Hospit
           rel="noopener noreferrer"
           className="flex-1 text-center bg-slate-100 text-slate-700 text-sm font-medium py-2.5 rounded-lg hover:bg-slate-200"
         >
+<<<<<<< HEAD
           {t('🗺️ Directions')}
+=======
+          🗺️ Directions
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
         </a>
       </div>
     </div>

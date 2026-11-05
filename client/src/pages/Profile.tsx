@@ -1,6 +1,9 @@
 import { useState, useEffect, FormEvent } from 'react';
 import { useAuth } from '../hooks/useAuth';
+<<<<<<< HEAD
 import { useLanguage } from '../contexts/LanguageContext';
+=======
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
 import { getProfile, updateProfile, getHistory } from '../api/client';
 import SeverityBadge from '../components/SeverityBadge';
 import { Severity } from '../utils/helpers';
@@ -16,7 +19,10 @@ interface HistoryItem {
 
 export default function Profile() {
   const { user, token, login, register, logout, updateUser } = useAuth();
+<<<<<<< HEAD
   const { language, t } = useLanguage();
+=======
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
   const [mode, setMode] = useState<'login' | 'register'>('login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -99,18 +105,30 @@ export default function Profile() {
   if (!token) {
     return (
       <div className="space-y-4 max-w-sm mx-auto">
+<<<<<<< HEAD
           <h2 className="text-xl font-semibold text-stone-900">
           {mode === 'login' ? t('Sign In') : t('Create Account')}
         </h2>
         <p className="text-sm text-slate-500">
           {t('Sign in to save symptom history and emergency profile info.')}
+=======
+        <h2 className="text-xl font-bold text-slate-800">
+          {mode === 'login' ? 'Sign In' : 'Create Account'}
+        </h2>
+        <p className="text-sm text-slate-500">
+          Sign in to save symptom history and emergency profile info.
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
         </p>
 
         <form onSubmit={handleAuth} className="space-y-3">
           {mode === 'register' && (
             <input
               type="text"
+<<<<<<< HEAD
               placeholder={t('Full name')}
+=======
+              placeholder="Full name"
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
@@ -119,7 +137,11 @@ export default function Profile() {
           )}
           <input
             type="email"
+<<<<<<< HEAD
             placeholder={t('Email')}
+=======
+            placeholder="Email"
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -127,20 +149,32 @@ export default function Profile() {
           />
           <input
             type="password"
+<<<<<<< HEAD
             placeholder={t('Password')}
+=======
+            placeholder="Password"
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
             minLength={6}
             className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-500"
           />
+<<<<<<< HEAD
           {error && <p role="alert" className="text-sm text-red-600">{t(error)}</p>}
+=======
+          {error && <p className="text-red-600 text-sm">{error}</p>}
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
           <button
             type="submit"
             disabled={loading}
             className="w-full bg-teal-700 text-white font-bold py-3 rounded-xl hover:bg-teal-800 disabled:opacity-50"
           >
+<<<<<<< HEAD
             {loading ? t('Please wait...') : mode === 'login' ? t('Sign In') : t('Register')}
+=======
+            {loading ? 'Please wait...' : mode === 'login' ? 'Sign In' : 'Register'}
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
           </button>
         </form>
 
@@ -148,7 +182,11 @@ export default function Profile() {
           onClick={() => setMode(mode === 'login' ? 'register' : 'login')}
           className="w-full text-teal-700 text-sm"
         >
+<<<<<<< HEAD
           {mode === 'login' ? t("Don't have an account? Register") : t('Already have an account? Sign in')}
+=======
+          {mode === 'login' ? "Don't have an account? Register" : 'Already have an account? Sign in'}
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
         </button>
       </div>
     );
@@ -159,21 +197,36 @@ export default function Profile() {
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-xl font-bold text-slate-800">{user?.name}</h2>
+<<<<<<< HEAD
           <p className="text-sm text-stone-500">{user?.email}</p>
         </div>
         <button onClick={logout} className="text-sm text-red-600 font-medium">
           {t('Sign out')}
+=======
+          <p className="text-sm text-slate-500">{user?.email}</p>
+        </div>
+        <button onClick={logout} className="text-sm text-red-600 font-medium">
+          Sign out
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
         </button>
       </div>
 
       <div className="bg-white rounded-xl p-4 border border-slate-200">
         <div className="flex justify-between items-center mb-3">
+<<<<<<< HEAD
           <h3 className="font-semibold">{t('Health Profile')}</h3>
+=======
+          <h3 className="font-semibold">Health Profile</h3>
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
           <button
             onClick={() => (editing ? saveProfile() : setEditing(true))}
             className="text-sm text-teal-700 font-medium"
           >
+<<<<<<< HEAD
             {editing ? (loading ? t('Saving...') : t('Save')) : t('Edit')}
+=======
+            {editing ? (loading ? 'Saving...' : 'Save') : 'Edit'}
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
           </button>
         </div>
 
@@ -182,13 +235,21 @@ export default function Profile() {
             <input
               value={profile.name}
               onChange={(e) => setProfile({ ...profile, name: e.target.value })}
+<<<<<<< HEAD
               placeholder={t('Name')}
+=======
+              placeholder="Name"
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
               className="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm"
             />
             <input
               value={profile.age}
               onChange={(e) => setProfile({ ...profile, age: e.target.value })}
+<<<<<<< HEAD
               placeholder={t('Age')}
+=======
+              placeholder="Age"
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
               type="number"
               className="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm"
             />
@@ -197,7 +258,11 @@ export default function Profile() {
               onChange={(e) => setProfile({ ...profile, bloodGroup: e.target.value })}
               className="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm"
             >
+<<<<<<< HEAD
               <option value="">{t('Blood Group')}</option>
+=======
+              <option value="">Blood Group</option>
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
               {['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'].map((bg) => (
                 <option key={bg} value={bg}>{bg}</option>
               ))}
@@ -205,13 +270,21 @@ export default function Profile() {
             <input
               value={profile.allergies}
               onChange={(e) => setProfile({ ...profile, allergies: e.target.value })}
+<<<<<<< HEAD
               placeholder={t('Allergies (comma separated)')}
+=======
+              placeholder="Allergies (comma separated)"
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
               className="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm"
             />
             <input
               value={profile.preExistingConditions}
               onChange={(e) => setProfile({ ...profile, preExistingConditions: e.target.value })}
+<<<<<<< HEAD
               placeholder={t('Pre-existing conditions (comma separated)')}
+=======
+              placeholder="Pre-existing conditions (comma separated)"
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
               className="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm"
             />
             <label className="flex items-center gap-2 text-sm">
@@ -221,11 +294,16 @@ export default function Profile() {
                 onChange={(e) => setProfile({ ...profile, isPregnant: e.target.checked })}
                 className="accent-teal-700"
               />
+<<<<<<< HEAD
               {t('Pregnant')}
+=======
+              Pregnant
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
             </label>
           </div>
         ) : (
           <dl className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+<<<<<<< HEAD
             <dt className="text-stone-500">{t('Age')}</dt>
             <dd>{profile.age || '—'}</dd>
             <dt className="text-stone-500">{t('Blood Group')}</dt>
@@ -234,14 +312,30 @@ export default function Profile() {
             <dd>{profile.allergies || t('None')}</dd>
             <dt className="text-stone-500">{t('Conditions')}</dt>
             <dd>{profile.preExistingConditions || t('None')}</dd>
+=======
+            <dt className="text-slate-500">Age</dt>
+            <dd>{profile.age || '—'}</dd>
+            <dt className="text-slate-500">Blood Group</dt>
+            <dd>{profile.bloodGroup || '—'}</dd>
+            <dt className="text-slate-500">Allergies</dt>
+            <dd>{profile.allergies || 'None'}</dd>
+            <dt className="text-slate-500">Conditions</dt>
+            <dd>{profile.preExistingConditions || 'None'}</dd>
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
           </dl>
         )}
       </div>
 
       <div>
+<<<<<<< HEAD
         <h3 className="mb-3 font-semibold text-stone-700">{t('Symptom Check History')}</h3>
         {history.length === 0 ? (
           <p className="rounded-xl border border-stone-200 bg-white p-4 text-sm text-stone-500">{t('No assessments yet.')}</p>
+=======
+        <h3 className="font-semibold text-slate-700 mb-3">Symptom Check History</h3>
+        {history.length === 0 ? (
+          <p className="text-sm text-slate-500 bg-white p-4 rounded-xl border">No assessments yet.</p>
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
         ) : (
           <div className="space-y-2">
             {history.map((h) => (
@@ -249,10 +343,17 @@ export default function Profile() {
                 <div className="flex justify-between items-start">
                   <div>
                     <p className="font-medium capitalize text-sm">
+<<<<<<< HEAD
                       {t(h.primarySymptom.replace(/_/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase()))}
                     </p>
                     <p className="text-xs text-slate-500 mt-0.5">
                       {new Date(h.createdAt).toLocaleDateString(language === 'hi' ? 'hi-IN' : language === 'te' ? 'te-IN' : 'en-IN')} · {t(h.specialty)}
+=======
+                      {h.primarySymptom.replace(/_/g, ' ')}
+                    </p>
+                    <p className="text-xs text-slate-500 mt-0.5">
+                      {new Date(h.createdAt).toLocaleDateString()} · {h.specialty}
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
                     </p>
                   </div>
                   <SeverityBadge severity={h.severity} />

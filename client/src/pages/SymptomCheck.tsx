@@ -8,7 +8,10 @@ import {
   getHospitalRecommendations,
 } from '../api/client';
 import { useAuth } from '../hooks/useAuth';
+<<<<<<< HEAD
 import { useLanguage } from '../contexts/LanguageContext';
+=======
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
 import { useGeolocation } from '../hooks/useGeolocation';
 import SeverityBadge from '../components/SeverityBadge';
 import HospitalCard from '../components/HospitalCard';
@@ -50,7 +53,10 @@ export default function SymptomCheck() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const { token } = useAuth();
+<<<<<<< HEAD
   const { t } = useLanguage();
+=======
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
   const { lat, lng } = useGeolocation();
   const navigate = useNavigate();
 
@@ -114,10 +120,17 @@ export default function SymptomCheck() {
   return (
     <div className="space-y-4 pb-4">
       <div>
+<<<<<<< HEAD
         <h2 className="text-xl font-semibold text-stone-900">{t('Symptom Checker')}</h2>
         <p className="mt-1 text-sm text-stone-500">{t('Step')} {step + 1} {t('of')} 3</p>
       </div>
       {error && <p role="alert" className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700">{t(error)}</p>}
+=======
+        <h2 className="text-xl font-bold text-slate-800">Symptom Checker</h2>
+        <p className="text-sm text-slate-500 mt-1">Step {step + 1} of 3</p>
+      </div>
+      {error && <p role="alert" className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700">{error}</p>}
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
 
       <div className="flex gap-2">
         {[0, 1, 2].map((s) => (
@@ -130,16 +143,27 @@ export default function SymptomCheck() {
 
       {step === 0 && (
         <div className="space-y-3">
+<<<<<<< HEAD
           <p className="text-stone-600">{t('What is your primary symptom?')}</p>
+=======
+          <p className="text-slate-600">What is your primary symptom?</p>
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
           <div className="grid grid-cols-2 gap-3">
             {symptoms.map((s) => (
               <button
                 key={s.id}
                 onClick={() => selectSymptom(s.id)}
+<<<<<<< HEAD
                 className="min-h-[80px] rounded-xl border border-stone-200 bg-white p-4 text-left transition-colors hover:border-[#9bb5a1]"
               >
                 <span className="text-2xl">{s.icon}</span>
                 <p className="mt-2 text-sm font-medium text-stone-800">{t(s.label)}</p>
+=======
+                className="bg-white border border-slate-200 rounded-xl p-4 text-left hover:border-teal-400 hover:shadow-md transition-all min-h-[80px]"
+              >
+                <span className="text-2xl">{s.icon}</span>
+                <p className="font-medium text-slate-800 mt-2 text-sm">{s.label}</p>
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
               </button>
             ))}
           </div>
@@ -149,8 +173,13 @@ export default function SymptomCheck() {
       {step === 1 && (
         <div className="space-y-5">
           {questions.map((q) => (
+<<<<<<< HEAD
             <div key={q.id} className="rounded-xl border border-stone-200 bg-white p-4">
               <p className="mb-3 font-medium text-stone-800">{t(q.question)}</p>
+=======
+            <div key={q.id} className="bg-white rounded-xl p-4 border border-slate-200">
+              <p className="font-medium text-slate-800 mb-3">{q.question}</p>
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
 
               {q.type === 'boolean' && (
                 <div className="flex gap-3">
@@ -160,7 +189,11 @@ export default function SymptomCheck() {
                       answers[q.id] === true ? 'bg-teal-700 text-white' : 'bg-slate-100 text-slate-700'
                     }`}
                   >
+<<<<<<< HEAD
                     {t('Yes')}
+=======
+                    Yes
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
                   </button>
                   <button
                     onClick={() => setAnswer(q.id, false)}
@@ -168,7 +201,11 @@ export default function SymptomCheck() {
                       answers[q.id] === false ? 'bg-teal-700 text-white' : 'bg-slate-100 text-slate-700'
                     }`}
                   >
+<<<<<<< HEAD
                     {t('No')}
+=======
+                    No
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
                   </button>
                 </div>
               )}
@@ -204,7 +241,11 @@ export default function SymptomCheck() {
                         answers[q.id] === opt ? 'bg-teal-700 text-white' : 'bg-slate-100 text-slate-700'
                       }`}
                     >
+<<<<<<< HEAD
                       {t(opt)}
+=======
+                      {opt}
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
                     </button>
                   ))}
                 </div>
@@ -217,7 +258,11 @@ export default function SymptomCheck() {
             disabled={loading}
             className="w-full bg-teal-700 hover:bg-teal-800 disabled:opacity-50 text-white font-bold py-4 rounded-xl"
           >
+<<<<<<< HEAD
             {loading ? t('Analyzing...') : t('Get Assessment')}
+=======
+            {loading ? 'Analyzing...' : 'Get Assessment'}
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
           </button>
         </div>
       )}
@@ -226,27 +271,42 @@ export default function SymptomCheck() {
         <div className="space-y-4">
           {isCritical && (
             <div className="bg-red-50 border-2 border-red-300 rounded-xl p-4">
+<<<<<<< HEAD
               <p className="text-lg font-semibold text-red-800">{t('⚠️ Critical — Seek Emergency Care Now')}</p>
               <p className="mt-1 text-sm text-red-700">
                 {t('Your symptoms may indicate a medical emergency. Use the SOS button or call 108 immediately.')}
+=======
+              <p className="font-bold text-red-800 text-lg">⚠️ Critical — Seek Emergency Care Now</p>
+              <p className="text-red-700 text-sm mt-1">
+                Your symptoms may indicate a medical emergency. Use the SOS button or call 108 immediately.
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
               </p>
               <div className="flex gap-2 mt-3">
                 <a
                   href="tel:108"
                   className="flex-1 text-center bg-red-600 text-white font-bold py-3 rounded-lg"
                 >
+<<<<<<< HEAD
                   {t('📞 Call 108')}
+=======
+                  📞 Call 108
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
                 </a>
                 <button
                   onClick={() => navigate('/emergency')}
                   className="flex-1 bg-red-100 text-red-800 font-bold py-3 rounded-lg"
                 >
+<<<<<<< HEAD
                   {t('🚨 SOS Dispatch')}
+=======
+                  🚨 SOS Dispatch
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
                 </button>
               </div>
             </div>
           )}
 
+<<<<<<< HEAD
             <div className="rounded-xl border border-stone-200 bg-white p-5">
             <div className="flex items-center justify-between">
               <h3 className="text-lg font-semibold">{t('Assessment Result')}</h3>
@@ -265,6 +325,26 @@ export default function SymptomCheck() {
                   {result.diseasePrediction.predictions.map((prediction) => (
                     <li key={prediction.disease} className="flex justify-between gap-3 text-sm">
                       <span className="font-medium text-stone-800">{t(prediction.disease)}</span>
+=======
+          <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+            <div className="flex items-center justify-between">
+              <h3 className="font-bold text-lg">Assessment Result</h3>
+              <SeverityBadge severity={result.severity} size="lg" />
+            </div>
+            <p className="text-sm text-slate-500 mt-1 capitalize">
+              Recommended specialty: {result.specialty}
+            </p>
+            <p className="text-slate-700 mt-3 leading-relaxed">{result.reasoning}</p>
+
+            {!!result.diseasePrediction?.predictions.length && (
+              <div className="mt-4 rounded-lg border border-teal-200 bg-teal-50 p-4">
+                <p className="text-xs font-bold uppercase tracking-wide text-teal-800">Model-based possibilities</p>
+                <p className="mt-1 text-xs text-teal-900/70">Statistical model output only; not a diagnosis.</p>
+                <ul className="mt-3 space-y-2">
+                  {result.diseasePrediction.predictions.map((prediction) => (
+                    <li key={prediction.disease} className="flex justify-between gap-3 text-sm">
+                      <span className="font-medium text-slate-800">{prediction.disease}</span>
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
                       <span className="text-slate-600">{Math.round(prediction.probability * 100)}%</span>
                     </li>
                   ))}
@@ -274,10 +354,17 @@ export default function SymptomCheck() {
 
             {result.redFlags.length > 0 && (
               <div className="mt-3 bg-orange-50 border border-orange-200 rounded-lg p-3">
+<<<<<<< HEAD
                 <p className="text-sm font-semibold text-orange-800">{t('Red Flags:')}</p>
                 <ul className="text-sm text-orange-700 mt-1 list-disc list-inside">
                   {result.redFlags.map((f) => (
                     <li key={f}>{t(f)}</li>
+=======
+                <p className="text-sm font-semibold text-orange-800">Red Flags:</p>
+                <ul className="text-sm text-orange-700 mt-1 list-disc list-inside">
+                  {result.redFlags.map((f) => (
+                    <li key={f}>{f}</li>
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
                   ))}
                 </ul>
               </div>
@@ -286,12 +373,20 @@ export default function SymptomCheck() {
 
           {!isCritical && hospitals.length > 0 && (
             <div className="space-y-3">
+<<<<<<< HEAD
               <h3 className="font-semibold text-stone-700">{t('Recommended Hospitals')}</h3>
+=======
+              <h3 className="font-semibold text-slate-700">Recommended Hospitals</h3>
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
               {lat && lng && (
                 <MapView
                   center={[lat, lng]}
                   markers={[
+<<<<<<< HEAD
                     { lat, lng, label: t('You'), type: 'user' },
+=======
+                    { lat, lng, label: 'You', type: 'user' },
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
                     ...hospitals.map((h) => ({
                       lat: h.lat as number,
                       lng: h.lng as number,
@@ -310,13 +405,21 @@ export default function SymptomCheck() {
           )}
 
           <button onClick={reset} className="w-full text-teal-700 font-medium py-3">
+<<<<<<< HEAD
             {t('Start New Assessment')}
+=======
+            Start New Assessment
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
           </button>
         </div>
       )}
 
       <div className="bg-slate-100 rounded-lg p-3 text-xs text-slate-500 leading-relaxed">
+<<<<<<< HEAD
         {t(DISCLAIMER)}
+=======
+        {DISCLAIMER}
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
       </div>
 
       <SOSButton symptomSeverity={result?.severity} />

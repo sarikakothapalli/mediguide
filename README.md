@@ -11,7 +11,10 @@ MediGuide is a demo health-guidance application for symptom severity checks, nea
 - **SOS ambulance** — Confirmation, location capture, simulated dispatch, ETA/map tracking, and a direct-call link for India’s 108 emergency number. The dispatch is a demo only; it does not contact real services.
 - **Seasonal advisories** — Month- and region-aware health guidance for Hyderabad/India.
 - **User profile and history** — JWT registration/login, editable health profile (age, blood group, allergies, conditions, pregnancy), and saved symptom assessments.
+<<<<<<< HEAD
 - **Language and accessible UI** — Switch the interface, symptom questions/results, and bundled seasonal advice between English, Hindi, and Telugu. The preference is saved in this browser; the UI uses a restrained, warm neutral background and responsive navigation.
+=======
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
 
 ## Technology
 
@@ -133,7 +136,10 @@ Authenticated endpoints accept `Authorization: Bearer <JWT>`.
 - Model probabilities are statistical output, may be wrong or incomplete, and must not guide treatment decisions.
 - Ambulance location, route, and ETA are simulated. No ambulance or emergency provider is contacted. Call **108** for an actual emergency in India.
 - Sample hospitals/pharmacies and their contact details are demo data and should be verified independently before use.
+<<<<<<< HEAD
 - Hindi and Telugu copy is provided for demonstration and should be reviewed by qualified translators/clinicians before use in patient care. Facility names/addresses and user-entered profile details remain in their original language; unsupported model terms may also remain in English.
+=======
+>>>>>>> 550dab46139872aade42b1e48c40fb96e788de42
 - The local JSON account store is intended for local demos only; it is not a secure production database.
 
 ## License
